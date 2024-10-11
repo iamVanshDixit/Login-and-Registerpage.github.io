@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+    function reg(){
+        let nm=document.getElementById("nm").value;
+        let mob=document.getElementById("mob").value;
+        let eml=document.getElementById("eml").value;
+        let pwd=document.getElementById("pwd").value;
+        let city=document.getElementById("city").value;
+        
+        localStorage.setItem("nm",nm);
+        localStorage.setItem("mob",mob);
+        localStorage.setItem("eml",eml);
+        localStorage.setItem("pwd",pwd);
+        localStorage.setItem("city",city);
+
+        alert("Registred Suceesfully..!");
+        window.location.replace("login2.html");
+    }
+</script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Student Registration</h2>
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="nm" placeholder="Enter your Name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="mob">Mobile no:</label>
+    <input type="number" class="form-control" id="mob" placeholder="Enter your Mobile Number" name="mobile">
+  </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="eml" placeholder="Enter your Email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter your password" name="pwd">
+    </div>
+    <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" class="form-control" id="city" placeholder="Enter your City" name="City">
+      </div>
+    
+    <button type="submit" onclick="reg()" class="btn btn-success">Submit</button>
+  <a href="login2.html">Allready Registred? Login</a>
+</form>
+</div>
+
+</body>
+</html>
